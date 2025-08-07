@@ -10,82 +10,117 @@ export default function Portfolio() {
     {
       title: "Pine VPN",
       description:
-        "VPN application for iOS and macOS with secure connection and privacy features. Successfully maintained and released multiple versions ensuring stable performance and Apple compliance.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Swift", "SwiftUI", "Core Data", "Network Security", "iOS", "macOS"],
+        "Secure VPN application providing private internet access and data encryption across multiple servers globally. Successfully revived after 2 years and launched on App Store with enhanced security features.",
+      image: "/pine-vpn-screenshots.png",
+      technologies: ["Swift", "SwiftUI", "StoreKit 2", "TunnelKit", "Passepartout", "MD5 Hashing", "Widget Kit"],
       liveUrl: "https://apps.apple.com/app/pine-vpn",
       status: "Live on App Store",
+      keyFeatures: [
+        "Migrated payment integration from StoreKit to StoreKit 2",
+        "Fixed VPN connectivity with updated TunnelKit and Passepartout",
+        "Implemented MD5 hashing for enhanced VPN certificate reception",
+        "Added Google and Apple login options",
+        "Built home screen widget for quick VPN access",
+      ],
     },
     {
       title: "Garuda ID",
       description:
-        "Flutter-based verification app with secure user authentication and easy verification process. Currently in development with advanced security features.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Flutter", "Dart", "Firebase", "Bloc", "Authentication"],
+        "Mobile verification app for PSSI (Indonesian Football Association) to verify ticket holders at soccer matches. Replaced web-based system with convenient mobile solution using Flutter.",
+      image: "/garuda-id-screenshots.png",
+      technologies: ["Flutter", "Dart", "MobX", "Dio", "Auto Route", "Firebase", "Deep Linking"],
       liveUrl: "#",
-      status: "Coming Soon",
+      status: "Live in Production",
+      keyFeatures: [
+        "Built with Flutter focusing on iOS platform",
+        "Integrated camera access for ID verification",
+        "Implemented deep linking functionality",
+        "Developed re-registration flow for user updates",
+        "Fixed login functionality for smoother UX",
+      ],
     },
     {
       title: "Home Surveillance App",
       description:
-        "Flutter application integrating CCTV systems with AI capabilities for smart home monitoring and security management.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Flutter", "Dart", "AI Integration", "CCTV", "Firebase", "Real-time Streaming"],
+        "Flutter-based home surveillance app connecting with CCTV cameras, featuring AI-based human detection and comprehensive security monitoring for enhanced home protection.",
+      image: "/home-surveillance-screenshots.png",
+      technologies: ["Flutter", "Dart", "AI Integration", "CCTV", "Firebase", "Authentication", "Device Pairing"],
       liveUrl: "#",
-      status: "In Development",
+      status: "In Production",
+      keyFeatures: [
+        "Developed authentication with login, registration, and OTP",
+        "Integrated camera devices with mobile app",
+        "Implemented user session management",
+        "Collaborated with AI teams for human detection",
+        "Ensured seamless device pairing processes",
+      ],
     },
     {
       title: "Gramedia E-Commerce App",
       description:
-        "Enhanced e-commerce mobile application for Indonesia's largest bookstore chain, improving user experience and performance across multiple versions.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Swift", "UIKit", "Core Data", "Alamofire", "Firebase"],
+        "E-commerce application for Indonesia's largest bookstore chain allowing users to purchase books, stationery, and products with seamless shopping experience and order tracking.",
+      image: "/gramedia-ecommerce-screenshots.png",
+      technologies: ["Swift", "UIKit", "MVVM", "Midtrans API", "Maps Integration", "Unit Testing"],
       liveUrl: "https://apps.apple.com/app/gramedia",
       status: "Live on App Store",
+      keyFeatures: [
+        "Revamped architecture from MVC to MVVM",
+        "Implemented new shipping features with maps integration",
+        "Upgraded payment integration with latest Midtrans API",
+        "Added comprehensive unit and UI testing",
+        "Released under high-pressure circumstances in 1 month",
+      ],
     },
     {
       title: "Gramedia Digital E-Reader",
       description:
-        "Complete rewrite from Objective-C to Swift, modernizing the digital book reading experience with improved performance and payment integration.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Swift", "SwiftUI", "Core Data", "Migration", "Payment Integration"],
+        "E-reader application providing access to thousands of digital books, magazines, and newspapers from Indonesia's largest publisher with seamless reading experience.",
+      image: "/gramedia-digital-screenshots.png",
+      technologies: ["Swift", "UIKit", "SwiftUI", "VIP Architecture", "StoreKit", "Midtrans", "Core Data"],
       liveUrl: "https://apps.apple.com/app/gramedia-digital",
       status: "Live on App Store",
+      keyFeatures: [
+        "Built with UIKit combined with SwiftUI",
+        "Followed VIP architecture with Router pattern",
+        "Integrated subscription-based payment systems",
+        "Optimized offline reading with content caching",
+        "Managed App Store releases and updates",
+      ],
     },
   ]
 
-  const appleSkills = [
+  const mobileSkills = [
+    "Flutter",
+    "Dart",
     "Swift",
     "Objective-C",
     "SwiftUI",
     "UIKit",
+    "iOS Development",
+    "iPadOS",
+    "macOS",
+    "MobX",
+    "Dio",
+    "Auto Route",
+    "StoreKit",
+    "StoreKit 2",
     "Core Data",
-    "SwiftData",
-    "Core Animation",
-    "ARKit",
-    "MVC",
-    "MVVM",
-    "Viper",
-    "Xcode",
-    "CocoaPods",
-    "SPM",
+    "Widget Kit",
     "Firebase",
-    "CloudKit",
-    "Core ML",
-    "Alamofire",
   ]
 
-  const flutterSkills = [
-    "Flutter",
-    "Dart",
-    "Kotlin",
-    "Bloc",
-    "Firebase",
-    "REST APIs",
-    "HTTP",
-    "Dio",
-    "FCM",
-    "Cross-Platform Development",
+  const architectureSkills = ["MVVM", "MVC", "VIP Architecture", "Router Pattern", "Clean Architecture"]
+
+  const otherSkills = [
+    "Python",
+    "UI/UX Design",
+    "Web Development",
+    "WordPress",
+    "Unit Testing",
+    "UI Testing",
+    "Payment Integration",
+    "Deep Linking",
+    "Camera Integration",
   ]
 
   const certifications = [
@@ -196,11 +231,12 @@ export default function Portfolio() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="/placeholder.svg?height=400&width=400"
-              alt="Rostadhi Akbar"
+              src="/profile-photo.jpg"
+              alt="Rostadhi Akbar - Senior Mobile Developer"
               width={400}
-              height={400}
-              className="aspect-square overflow-hidden rounded-xl object-cover"
+              height={500}
+              className="overflow-hidden rounded-xl object-contain shadow-lg bg-gray-50"
+              priority
             />
           </div>
         </div>
@@ -211,69 +247,90 @@ export default function Portfolio() {
         <div className="mx-auto max-w-[800px] text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">About Me</h2>
           <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed mb-6">
-            I'm a passionate Software Engineer specializing in mobile app development with expertise in iOS and Flutter.
-            With 3 iOS apps successfully published on the App Store and 1 Flutter app ready for release, I bring
-            extensive experience in developing applications within the Apple ecosystem and cross-platform solutions.
-          </p>
-          <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed">
-            My experience spans across various domains including e-commerce mobile apps, e-reader applications, VPN
-            solutions, verification systems, and home surveillance applications. I'm currently pursuing advanced
-            development techniques and staying updated with the latest mobile development trends.
+            I'm a software engineer specializing in mobile app development who made a successful career transition from
+            sports to tech. With more than 3 years of experience in iOS and Flutter development, I've built and
+            published 3 iOS apps and 2 Flutter apps across various domains including e-commerce, e-reader applications,
+            VPN solutions, online verification systems, and home surveillance applications. As a former golf athlete and
+            professional swimming coach, I bring discipline, teamwork, and problem-solving skills from sports into
+            software development. I'm excited to contribute to innovative mobile solutions and collaborate with teams to
+            create impactful applications.
           </p>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="container py-32 md:py-40 px-6 md:px-8 bg-muted/50">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Professional Experience</h2>
-        </div>
-        <div className="max-w-4xl mx-auto space-y-8">
-          <Card>
-            <CardHeader>
-              <div className="flex justify-between items-start">
-                <div>
-                  <CardTitle>Senior Staff - IT Solution</CardTitle>
-                  <CardDescription className="text-lg">Assist X Enterprise • Jakarta, Indonesia</CardDescription>
+      <section id="experience" className="w-full py-32 md:py-40 bg-muted/50">
+        <div className="container mx-auto px-6 md:px-8">
+          <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Professional Experience</h2>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <Card>
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>Staff Solution Department - iOS Developer</CardTitle>
+                    <CardDescription className="text-lg">PT Milleano Amertha Data • Jakarta, Indonesia</CardDescription>
+                  </div>
+                  <Badge variant="secondary">Oct 2023 - Present</Badge>
                 </div>
-                <Badge variant="secondary">2023 - Present</Badge>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Leading mobile development initiatives, successfully finalizing Pine VPN release and overseeing ongoing
-                development. Currently developing Flutter applications with a team of mobile engineers.
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                <li>Maintained and released new versions of Pine VPN apps on iOS and macOS</li>
-                <li>Developed Garuda ID app using Flutter with secure authentication</li>
-                <li>Built Home Surveillance app integrating CCTV and AI technologies</li>
-              </ul>
-            </CardContent>
-          </Card>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Leading iOS development initiatives, successfully reviving and launching Pine VPN after 2 years.
+                  Currently developing Flutter applications including home surveillance and verification systems.
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                  <li>Revived and launched Pine VPN on App Store with enhanced security features</li>
+                  <li>Developed Garuda ID verification app for PSSI using Flutter</li>
+                  <li>Built Home Surveillance app with AI-based human detection</li>
+                  <li>Migrated payment systems to latest Apple requirements</li>
+                </ul>
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardHeader>
-              <div className="flex justify-between items-start">
-                <div>
-                  <CardTitle>Staff IT - Gramedia.Com & Gramedia Digital</CardTitle>
-                  <CardDescription className="text-lg">Kompas Gramedia • Jakarta, Indonesia</CardDescription>
+            <Card>
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>Staff IT - iOS Developer</CardTitle>
+                    <CardDescription className="text-lg">PT Kompas Gramedia • Jakarta, Indonesia</CardDescription>
+                  </div>
+                  <Badge variant="secondary">Feb 2022 - Oct 2023</Badge>
                 </div>
-                <Badge variant="secondary">2022 - 2023</Badge>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Developed new versions of Gramedia e-commerce apps and completely revamped Gramedia Digital e-book
-                applications, migrating from Objective-C to Swift.
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                <li>Launched multiple versions of Gramedia e-commerce and digital e-book apps</li>
-                <li>Migrated legacy Objective-C code to modern Swift architecture</li>
-                <li>Released Gramedia iOS versions 1.19 - 1.21.3 and Gramedia Digital 5.0.0 & 5.0.1</li>
-              </ul>
-            </CardContent>
-          </Card>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Developed and maintained Gramedia's e-commerce and digital reading applications. Successfully
+                  delivered critical updates under high-pressure circumstances and improved app architecture.
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                  <li>Revamped Gramedia.com app architecture from MVC to MVVM</li>
+                  <li>Integrated new payment systems and shipping features</li>
+                  <li>Built Gramedia Digital e-reader with VIP architecture</li>
+                  <li>Implemented comprehensive testing and quality assurance</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle>Intern - iOS Developer</CardTitle>
+                    <CardDescription className="text-lg">Apple Developer Academy • BSD, Indonesia</CardDescription>
+                  </div>
+                  <Badge variant="secondary">Jan 2021 - Jan 2022</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Intensive iOS development program focusing on Swift, SwiftUI, and Apple ecosystem technologies. Gained
+                  foundational skills in mobile app development and Apple's development practices.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -342,36 +399,98 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="container py-32 md:py-40 px-6 md:px-8 bg-muted/50">
+      {/* Other Projects Section */}
+      <section className="container py-32 md:py-40 px-6 md:px-8">
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Technical Skills</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Other Professional Projects</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Technologies and frameworks I use to build mobile applications.
+              Additional projects showcasing versatility in web development and business solutions.
             </p>
           </div>
-
-          <div className="w-full max-w-6xl pt-12 space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Apple Ecosystem</h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                {appleSkills.map((skill) => (
-                  <Badge key={skill} variant="outline" className="text-sm py-2 px-4">
-                    {skill}
-                  </Badge>
-                ))}
+        </div>
+        <div className="mx-auto grid max-w-4xl items-center gap-6 py-16 md:grid-cols-2">
+          <Card>
+            <CardHeader>
+              <CardTitle>K-Advisory Website</CardTitle>
+              <CardDescription>Custom WordPress Development</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Built company website using custom WordPress with tailored design and enhanced features based on user
+                feedback to improve engagement and user experience.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline">WordPress</Badge>
+                <Badge variant="outline">Custom Design</Badge>
+                <Badge variant="outline">UX Optimization</Badge>
               </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Rumah Renang</CardTitle>
+              <CardDescription>Swimming Platform Startup</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                First digital platform for swimming services, allowing users to choose location, schedule, and
+                professional coaches. Combining sports expertise with technology innovation.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline">Startup</Badge>
+                <Badge variant="outline">Digital Platform</Badge>
+                <Badge variant="outline">Sports Tech</Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="w-full py-32 md:py-40 bg-muted/50">
+        <div className="container mx-auto px-6 md:px-8">
+          <div className="flex flex-col items-center justify-center space-y-6 text-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Technical Skills</h2>
+              <p className="max-w-[900px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Technologies and frameworks I use to build mobile applications.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Cross-Platform (Flutter)</h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                {flutterSkills.map((skill) => (
-                  <Badge key={skill} variant="outline" className="text-sm py-2 px-4">
-                    {skill}
-                  </Badge>
-                ))}
+            <div className="w-full max-w-6xl mx-auto pt-12 space-y-8">
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-4">Mobile Development</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {mobileSkills.map((skill) => (
+                    <Badge key={skill} variant="outline" className="text-sm py-2 px-4">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-4">Architecture</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {architectureSkills.map((skill) => (
+                    <Badge key={skill} variant="outline" className="text-sm py-2 px-4">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-4">Other Skills</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {otherSkills.map((skill) => (
+                    <Badge key={skill} variant="outline" className="text-sm py-2 px-4">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
